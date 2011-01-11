@@ -4,7 +4,7 @@ require 'logger'
 require 'fileutils'
 require 'test_help'
 
-plugin_path = RAILS_ROOT + "/vendor/plugins/migration_test_helper"
+plugin_path = RAILS_ROOT + "/vendor/plugins/birdbath"
 
 config_location = File.expand_path(plugin_path + "/test/config/database.yml")
 

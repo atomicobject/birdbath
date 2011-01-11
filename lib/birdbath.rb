@@ -23,7 +23,7 @@
 
 require 'test/unit/assertions'
 
-module MigrationTestHelper 
+module Birdbath 
   def self.migration_dir
     @migration_dir || File.expand_path(RAILS_ROOT + '/db/migrate')
   end
@@ -87,7 +87,7 @@ module MigrationTestHelper
     old_verbose = ActiveRecord::Migration.verbose
     ActiveRecord::Migration.verbose = opts[:verbose].nil? ? false : opts[:verbose]
     version = opts[:version] ? opts[:version].to_i : nil
-    ActiveRecord::Migrator.migrate(MigrationTestHelper.migration_dir, version)
+    ActiveRecord::Migrator.migrate(Birdbath.migration_dir, version)
   ensure
     ActiveRecord::Migration.verbose = old_verbose
   end

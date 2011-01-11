@@ -1,7 +1,7 @@
 if RAILS_ENV == 'test'
-  require 'migration_test_helper'
+  require 'birdbath'
   require 'test/unit'
   Test::Unit::TestCase.class_eval do
-    include MigrationTestHelper
+    include Birdbath
   end
 end

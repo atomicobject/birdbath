@@ -1,23 +1,18 @@
-= MigrationTestHelper
+= Birdbath
 
-MigrationTestHelper provides methods which let you assert the current state of the schema and run your migrations against the _test_ database.
+Birdbath provides methods which let you assert the current state of the schema and run your migrations against the _test_ database.
 
 == Install
 
-  ./script/plugin install svn://rubyforge.org/var/svn/migrationtest/tags/migration_test_helper
+  gem install birdbath
 
-OR
-
-  gem install migration_test_helper
-
-
-If you're using it outside of a Rails environment (for whatever reason) include the MigrationTestHelper module in your tests:
+If you're using it outside of a Rails environment (for whatever reason) include the Birdbath module in your tests:
 
   require 'test/unit'
-  require 'migration_test_helper'
+  require 'birdbath'
 
   class MyTest < Test::Unit::TestCase
-    include MigrationTestHelper
+    include Birdbath
     
     def test_something
       ...

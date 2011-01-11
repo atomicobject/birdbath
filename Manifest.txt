@@ -12,13 +12,13 @@
 ./init.rb
 ./install.rb
 ./lib
-./lib/migration_test_helper.rb
+./lib/birdbath.rb
 ./LICENSE
 ./Manifest.txt
 ./Rakefile
 ./README
 ./tasks
-./tasks/migration_test_helper_tasks.rake
+./tasks/birdbath_tasks.rake
 ./test
 ./test/config
 ./test/config/database.yml
@@ -35,5 +35,5 @@
 ./test/helper.rb
 ./test/log
 ./test/migration_test_generator_test.rb
-./test/migration_test_helper_test.rb
+./test/birdbath_test.rb
 ./uninstall.rb

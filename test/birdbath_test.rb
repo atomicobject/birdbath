@@ -1,10 +1,10 @@
 require File.expand_path(File.dirname(__FILE__) + '/helper') 
 
-class MigrationTestHelperTest < Test::Unit::TestCase
+class BirdbathTest < Test::Unit::TestCase
 
   def setup
     load_default_schema
-    MigrationTestHelper.migration_dir = plugin_path('test/db/migrate_good')
+    Birdbath.migration_dir = plugin_path('test/db/migrate_good')
   end
 
   #
@@ -245,14 +245,14 @@ class MigrationTestHelperTest < Test::Unit::TestCase
   end
 
   def test_should_have_default_migration_dir_set
-    MigrationTestHelper.migration_dir = nil
-    assert_equal File.expand_path(RAILS_ROOT + '/db/migrate'), MigrationTestHelper.migration_dir, 
+    Birdbath.migration_dir = nil
+    assert_equal File.expand_path(RAILS_ROOT + '/db/migrate'), Birdbath.migration_dir, 
       "wrong default migration dir"
     
   end
 
   def test_should_raise_error_if_migration_fails
-    MigrationTestHelper.migration_dir = plugin_path('test/db/migrate_bad')
+    Birdbath.migration_dir = plugin_path('test/db/migrate_bad')
     drop_all_tables
     err = assert_raise RuntimeError do
       migrate
