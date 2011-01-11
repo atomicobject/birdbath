@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Micah Alles"]
   s.email       = ["micah@atomicobject.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/atomicobject/birdbath"
   s.summary     = %q{A Rails gem for testing migrations}
   s.description = <<-EOS
 birdbath makes testing your migrations easier by 
