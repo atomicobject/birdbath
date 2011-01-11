@@ -1,6 +1,4 @@
 source "http://rubygems.org"
 
-group :development do
-  gem "hoe"
-end
-
+# Specify your gem's dependencies in birdbath.gemspec
+gemspec

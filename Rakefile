@@ -1,25 +1,8 @@
-require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
+require 'bundler'
+Bundler::GemHelper.install_tasks
 
-require 'rubygems'
-require 'bundler/setup'
-
-
-task :default => :test
-
-desc 'Generate documentation for the birdbath plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'Birdbath'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('LICENSE')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
-
-GEM_VERSION = '1.3.3'
-
+# GEM_VERSION = '1.3.3'
+# 
 # Hoe.new('birdbath', GEM_VERSION) do |p|
 #   p.author = "Micah Alles" 
 #   p.email = "micah@atomicobject.com" 
