@@ -115,3 +115,11 @@ The *migrate* helper can also be useful for testing data tranformation migration
     book.reload
     assert_equal "bad title with odd spacing", book.title
   end 
+
+== Authors
+
+* Micah Alles (alles@atomicobject.com)
+* David Crosby (crosby@atomicobject.com)
+* Patrick Bacon (bacon@atomicobject.com)
+* © 2007-2011 [Atomic Object](http://www.atomicobject.com/)
+* More Atomic Object [open source](http://www.atomicobject.com/pages/Software+Commons) projects
