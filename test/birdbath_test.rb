@@ -245,10 +245,10 @@ class BirdbathTest < Test::Unit::TestCase
   end
 
   def test_should_have_default_migration_dir_set
+    root = defined?(RAILS_ROOT) ? RAILS_ROOT : Rails.root.to_s
     Birdbath.migration_dir = nil
-    assert_equal File.expand_path(RAILS_ROOT + '/db/migrate'), Birdbath.migration_dir, 
+    assert_equal File.expand_path(root + '/db/migrate'), Birdbath.migration_dir, 
       "wrong default migration dir"
-    
   end
 
   def test_should_raise_error_if_migration_fails

@@ -2,9 +2,9 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../../../config/environment')
 require 'logger'
 require 'fileutils'
-require 'test_help'
 
-plugin_path = RAILS_ROOT + "/vendor/plugins/birdbath"
+rails_root = defined?(RAILS_ROOT) ? RAILS_ROOT : Rails.root.to_s
+plugin_path = rails_root + "/vendor/plugins/birdbath"
 
 config_location = File.expand_path(plugin_path + "/test/config/database.yml")
 
@@ -30,11 +30,11 @@ class Test::Unit::TestCase
   end
 
   def migration_test_path
-    File.expand_path(RAILS_ROOT + "/test/migration")
+    File.expand_path(rails_root + "/test/migration")
   end
 
   def run_in_rails_root(command)
-    cd RAILS_ROOT do
+    cd rails_root do
       @output = `#{command}`
     end
   end
