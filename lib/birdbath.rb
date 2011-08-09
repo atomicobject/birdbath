@@ -25,7 +25,8 @@ require 'test/unit/assertions'
 
 module Birdbath 
   def self.migration_dir
-    @migration_dir || File.expand_path(RAILS_ROOT + '/db/migrate')
+    root = defined?(RAILS_ROOT) ? RAILS_ROOT : Rails.root.to_s
+    @migration_dir || File.expand_path(root + '/db/migrate')
   end
 
   #
